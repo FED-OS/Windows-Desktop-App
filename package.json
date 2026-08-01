@@ -1,7 +1,7 @@
   "name": "FED-OS-desktop",
   "version": "1.0.1",
   "author": "Viral",
-  "description": "Desktop client for https://sites.google.com/view/fedpromptly/home/",
+  "description": "Desktop client for https://www.fedpromptly.com/home",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
@@ -26,4 +26,4 @@
     "electron": "^28.0.0",
     "electron-builder": "^24.0.0"
   }
-
+}
