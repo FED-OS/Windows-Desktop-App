@@ -9,7 +9,7 @@
   },
   "build": {
     "appId": "com.yourdomain.app",
-    "productName": "Pulse",
+    "productName": "FED-OS",
     "files": [
       "src/**/*"
     ],
