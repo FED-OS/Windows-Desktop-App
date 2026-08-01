@@ -1,5 +1,5 @@
   "name": "FED-OS-desktop",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Viral",
   "description": "Desktop client for https://www.fedpromptly.com/home",
   "main": "src/main.js",
