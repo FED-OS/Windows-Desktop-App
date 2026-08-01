@@ -15,11 +15,11 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "src/female_woman_girl_person_user_client_1470.ico"
+      "icon": "src/tdhdthd.ico"
     },
     "nsis": {
-      "installerIcon": "src/female_woman_girl_person_user_client_1470.ico",
-      "uninstallerIcon": "src/female_woman_girl_person_user_client_1470.ico"
+      "installerIcon": "src/tdhdthd.ico",
+      "uninstallerIcon": "src/tdhdthd.ico"
     }
   },
   "devDependencies": {
