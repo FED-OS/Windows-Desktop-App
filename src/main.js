@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://pt-im.github.io/Forum/');
+  win.loadURL('https://sites.google.com/view/fedpromptly/home');
 }
 
 app.whenReady().then(createWindow);
