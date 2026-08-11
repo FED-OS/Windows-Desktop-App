@@ -2,7 +2,7 @@
   "name": "FED-OS-desktop",
   "version": "1.0.0",
   "author": "Viral",
-  "description": "Desktop client for https://www.fedpromptly.com/home",
+  "description": "Desktop client for fed-os.github.io/Fed-Poster/",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
