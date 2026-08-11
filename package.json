@@ -1,6 +1,6 @@
 {
   "name": "FED-OS-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Viral",
   "description": "Desktop client for https://www.fedpromptly.com/network/os-sysytem/fed-poster",
   "main": "src/main.js",
