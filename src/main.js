@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://sites.google.com/view/fedpromptly/home');
+  win.loadURL('fed-os.github.io/Fed-Poster/');
 }
 
 app.whenReady().then(createWindow);
