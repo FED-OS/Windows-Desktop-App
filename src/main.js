@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://www.fedpromptly.com/network/os-sysytem/fed-poster');
+  win.loadURL('https://sites.google.com/view/fedprompt/fed-poster');
 }
 
 app.whenReady().then(createWindow);
