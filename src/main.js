@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://fed-os.github.io/Nextdoor-Post-Checker/');
+  win.loadURL('https://ko-fi.com/fedpromptl');
 }
 
 app.whenReady().then(createWindow);
