@@ -1,5 +1,8 @@
 # ⚡ FED-OS: The Federated Enterprise Digital Operating System [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W3T61ZU5FS)
 
+<img width="807" height="450" alt="1780326384" src="https://github.com/user-attachments/assets/6f4d2023-8eba-4a78-b9a3-7617f9a1c133" />
+
+
 ```json
 {
   "status": "SOVEREIGN_DIGITAL_JURISDICTION",
