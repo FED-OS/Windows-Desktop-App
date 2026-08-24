@@ -1,19 +1,42 @@
-name: Build Windows Installer
+name: Build Desktop Installers
+
 on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
+
 jobs:
   build:
-    runs-on: windows-latest
+    # Run on each OS
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        # Optional: friendly names for artifacts
+        include:
+          - os: windows-latest
+            platform: windows
+          - os: macos-latest
+            platform: mac
+          - os: ubuntu-latest
+            platform: linux
+
+    runs-on: ${{ matrix.os }}
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+
       - run: npm install
+
+      # Build for the current platform (produces .exe, .dmg, .AppImage, etc.)
       - run: npm run dist
+
+      # Upload the built installer(s) – adjust the path if your build outputs
+      # go to a different folder (e.g. release/ or out/)
       - uses: actions/upload-artifact@v4
         with:
-          name: Windows-Installer
-          path: dist/*.exe
+          name: installer-${{ matrix.platform }}
+          path: dist/*
