@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://sites.google.com/view/fedprompt/fed-poster');
+  win.loadURL('https://fed-os.github.io/FED-Bages-All-SVG-badge-services/');
 }
 
 app.whenReady().then(createWindow);
