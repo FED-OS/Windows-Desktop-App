@@ -7,11 +7,9 @@ on:
 
 jobs:
   build:
-    # Run on each OS
     strategy:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
-        # Optional: friendly names for artifacts
         include:
           - os: windows-latest
             platform: windows
@@ -31,11 +29,9 @@ jobs:
 
       - run: npm install
 
-      # Build for the current platform (produces .exe, .dmg, .AppImage, etc.)
+      # Build for the current platform (requires "dist" script to be platform-agnostic)
       - run: npm run dist
 
-      # Upload the built installer(s) – adjust the path if your build outputs
-      # go to a different folder (e.g. release/ or out/)
       - uses: actions/upload-artifact@v4
         with:
           name: installer-${{ matrix.platform }}
