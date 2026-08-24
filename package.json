@@ -2,7 +2,7 @@
   "name": "FED-OS-desktop",
   "version": "1.0.1",
   "author": "Viral",
-  "description": "Desktop client for https://fed-os.github.io/Nextdoor-Post-Checker/",
+  "description": "Desktop client for https://ko-fi.com/fedpromptly",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
