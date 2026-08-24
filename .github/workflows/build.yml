@@ -2,37 +2,44 @@ name: Build Desktop Installers
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   workflow_dispatch:
 
 jobs:
   build:
+    name: Build ${{ matrix.platform }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
         include:
           - os: windows-latest
             platform: windows
           - os: macos-latest
-            platform: mac
+            platform: macos
           - os: ubuntu-latest
             platform: linux
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: npm
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      # Build for the current platform (requires "dist" script to be platform-agnostic)
-      - run: npm run dist
+      - name: Build installer for current platform
+        run: npm run dist
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
           name: installer-${{ matrix.platform }}
-          path: dist/*
+          path: dist/**
+          if-no-files-found: error
