@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('https://fed-os.github.io/FED-Bages-All-SVG-badge-services/');
+  win.loadURL('https://fed-os.github.io/Nextdoor-Post-Checker/');
 }
 
 app.whenReady().then(createWindow);
